@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+.main{width:1140px;margin:0 auto;text-align:center;}
+.main h3{height:96px;line-height:96px;font-size:30px;font-weight:bold;padding-top:57px;}
+.main p{height:23px;line-height:23px;font-size:13px;padding:0 136px;color:#b0b0b0;height:100px;}
+.main .text{width:333px;height:47px;line-height:47px;padding:0 17px;background-color:#ededed;font-size:16px;color:#aeaeae;border:1px solid #dcdbde;border-radius:4px;}
+.main textarea{width:1081px;height:248px;line-height:47px;padding:0 17px;background-color:#ededed;font-size:16px;color:#aeaeae;border:1px solid #dcdbde;margin:24px 0 45px 0;border-radius:4px;}
+.main .tijiao{width:225px;height:57px;font-size:16px;background-color:#ed5844;border-radius:4px;box-shadow:0 0 7px rgba(0,0,0,.5)inset;color:#fff;cursor:pointer;margin-bottom:42px;}

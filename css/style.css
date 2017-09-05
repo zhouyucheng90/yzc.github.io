@@ -1,0 +1,5 @@
+body,h1,h2,h3,h4,h5,h6,ul,ol,dd,dl,textarea,input,submit,value,p{margin:0;padding:0;}
+ul,ol{list-style:none;}
+body{font-family:arial,"宋体","Microsoft YaHei";}
+img,textarea,input{border:none;}
+a{text-decoration:none;}
