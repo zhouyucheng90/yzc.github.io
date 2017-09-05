@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="user-scalable=0initial-scale=1width=device-width"><title>my-vue</title><link href=./static/css/app.2d1c4945e0091057008a4ed1bc487339.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript>// 按 1rem =(720 / 7.2)px 换算
+		    (function (doc, win) {
+		      var docEl = doc.documentElement,
+		        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		        recalc = function () {
+		          var clientWidth = docEl.clientWidth;
+		          if (!clientWidth) return;
+		          // 按照设计稿720px来计算 浏览器默认基数单位为1rem = 16px,所以这里的1rem = 720 / 7.2
+		          docEl.style.fontSize = 720 / 7.2 * (clientWidth / 720) + 'px';
+		        };
+		
+		      if (!doc.addEventListener) return;
+		      win.addEventListener(resizeEvt, recalc, false);
+		      recalc();
+		      
+		    })(document, window);</script><script type=text/javascript src=./static/js/manifest.6930b14dc60ce3555b4e.js></script><script type=text/javascript src=./static/js/vendor.a8a76eccf448d5381acd.js></script><script type=text/javascript src=./static/js/app.8b7691fa864b545c4ba6.js></script></body></html>

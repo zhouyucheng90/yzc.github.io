@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			#box{position: relative;width: 320px;height: 480px;background: url(img/game_bg.jpg) no-repeat;}
+			#grade{position:absolute; font-weight:bold; font-size:16px; color:white; left:65px; top:13px;}
+			#count{position: absolute; background-image: url(img/progress.png) ;background-repeat: no-repeat;width:180px; height:16px;left: 63px;top: 66px;}
+			#goudown{position:absolute; width:320px; text-align:center; left:0; top:200px;}
+			#goudown a{line-height:50px; font-size:30px; font-weight:bold; color:#F60; text-shadow:0 0 5px #FFFF00; display:block; text-decoration:none;}
+			#wolfs img{position: absolute;}
+			#grade{color: #fff;}
+			#over1{position:absolute; width:320px; text-align:center; left:0; top:200px;line-height:50px; font-size:30px; font-weight:bold; color:#F60; text-shadow:0 0 5px #FFFF00;text-decoration:none;display: none;}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="grade">0</div>
+			<div id="count"></div>
+			<div id="wolfs">
+	    	 <!--<img src="img/h5.png"/>--> 
+		  	</div>
+		  	<div id="goudown">
+		  		<a href="#" id="gou">开始</a>
+		  		<a href="#" id="explain">游戏操作说明</a>
+		  	</div>
+		  	<div id="over1">Game over</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var box = document.getElementById('box');//最外层盒子
+	var grade = document.getElementById('grade');//得分
+	var count = document.getElementById('count');//滑动条
+	var over1 = document.getElementById('over1');//游戏结束
+	var goudown = document.getElementById('goudown');//开始菜单
+	var wolfs = document.getElementById('wolfs');//灰太狼盒子们
+	var gou = document.getElementById('gou');//点击游戏开始
+	var inittimer;
+	var countitmer;
+	var score = 0;
+	var arrPos = [
+		{left:"98px",top:"115px"},
+		{left:"17px",top:"160px"},
+		{left:"15px",top:"220px"},
+		{left:"30px",top:"293px"},
+		{left:"122px",top:"273px"},
+		{left:"207px",top:"295px"},
+		{left:"200px",top:"211px"},
+		{left:"187px",top:"141px"},
+		{left:"100px",top:"185px"}
+	];
+	
+	gou.onclick = function(){
+		goudown.style.display = 'none';//隐藏开始菜单
+		
+		count1();// 滑动条 和 gome over 
+		
+		inittimer = setInterval(function(){//开始计时
+			init();//没隔100 毫秒 创一只狼
+
+		},100)
+		
+	}
+	function init(){//生产狼
+		var img = document.createElement('img');//灰太狼图片
+		img.type = Math.random()>0.7 ? 'x': 'h';//判断随机数，大于30%就显示小灰灰  否则70%概率显示灰太狼
+		img.index = 0;//出来的第一张图
+		img.src = 'img/'+img.type+img.index+'.png';//大于30%就显示小灰灰  否则70%概率显示灰太狼
+		img.pos =parseInt(Math.random()*9);//9个洞，随机出一个
+		img.beat = true;//标记狼被打了没
+		
+		if(isRepeated(img)){
+			return;
+		}
+		
+		var l = arrPos[img.pos].left;//获取数组里的left值
+		var t = arrPos[img.pos].top;//获取数组里的top值
+		img.style.left = l;//赋值给图片
+		img.style.top = t;//赋值给图片
+		langchu(img)//狼出来
+
+		clickLang(img)//狼点击事件
+		wolfs.appendChild(img);//添加到父亲盒子
+		
+	}
+	
+	function isRepeated(obj) {
+		var children = wolfs.children;//遍历所有出现的狼
+		for (var i=0; i<children.length; i++){
+			if (children[i].pos.l == obj.pos.l){
+				return true;//不能两个出现
+			}
+		}
+		return false;
+	};
+	function langchu(obj){//狼出来的函数
+		obj.itmer=setInterval(function(){
+			obj.index++;//出来的系列图
+			if(obj.index>5){
+				clearInterval(obj.itmer)
+				langtui(obj);//如果大于5 就开始回去，调用回去函数
+				return;
+			}
+			obj.src='img/'+obj.type+obj.index+'.png';//每隔100毫秒换一张出来的图
+		},100)
+	};
+	function langtui(obj){//狼回去的函数
+		obj.itmers = setInterval(function(){
+			obj.index--;//回去的系列图
+			if(obj.index<0){//狼退场
+				clearInterval(obj.itmers);//关闭计时器
+				wolfs.removeChild(obj);//删除图片
+				return;
+			}
+			obj.src = 'img/'+obj.type+obj.index+'.png';//每隔100毫秒换一张回去的图
+		},100)
+	}
+	
+	function clickLang(obj){//给每个出来的狼都绑定点击事件
+		obj.onclick = function(){
+			if(!obj.beat){
+				return;
+			}
+			clearInterval(obj.itmer);//点中了就停止当时出来的狼
+			clearInterval(obj.itmers);//点中了就停止当时回去的狼
+			clearInterval(obj.clickTimer);
+			
+			jifen(obj);//记录分
+			obj.index = 5;//打中的图是从第6张开始循环到第9张结束，点击到就换循环这个图
+			obj.clickTimer = setInterval(function () {
+				obj.index++;
+				if (obj.index>9){
+					clearInterval(obj.clickTimer);//打中图片出来完后，停止计时器
+					wolfs.removeChild(obj);//打中图片出来完后删除自己
+					return;
+				}
+				obj.src = 'img/'+obj.type+obj.index+'.png';
+			},100);
+			obj.beat = !obj.beat;
+		}
+	}
+	function jifen(obj) {
+		if(obj.type=='h'){//判断是不是打的灰太狼，图片h开头
+			score += 10;
+		}else{
+			score -= 10;//否则就是小灰灰，就减分
+		}
+		grade.innerHTML=score;//赋值给页面上的分
+	}	
+	function count1(){// 滑动条 和 gome over 
+		
+		countitmer = setInterval(function(){
+			var q=count.offsetWidth;//滑动条宽度
+			q--;//每隔100毫秒减少一个像素
+			if(q<0){
+				clearInterval(countitmer);//倒计时停
+				clearInterval(inittimer);//创造狼停
+				over1.style.display = 'block';//显示游戏结束
+				return;
+			}
+			count.style.width = q+'px';//宽度变少
+		},100)
+		
+	}
+
+	
+</script>

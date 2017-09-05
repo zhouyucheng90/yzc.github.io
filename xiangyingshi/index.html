@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrap 101 Template</title>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<style type="text/css">
+			.my_log{height: 32px;background: #1f272d;}
+			.my_loginner{display: inline-block;}
+			.my_loginner span{font-size: 12px;color: #717171;line-height: 30px;}
+			.my_ul{float: right;padding-top: 6px;}
+			.my_ul li{float: left;height: 25px;width: 25px;list-style: none;}
+			.navbar{min-height: 80px;margin-bottom: 0;border-radius: 0;}
+			.navbar-default{min-height: 80px;background: #283036;border-color: #283036;}
+			.navbar-default .navbar-collapse{border-color: transparent;}
+			.navbar-brand {max-width: 224px;max-height: 60px;}
+			.navbar-nav > li > a{line-height: 50px;}
+			.mysou > span{color: #7f8081;}
+			.mycpt{max-width: 530px;max-height: 500px;}
+			.mywindow{background: #f04949;padding: 50px 0;}
+			.mytext{color: #fff;}
+			.mytext h3{line-height: 65px;font-size: 50px;margin: 100px 0 20px;}
+			.mytextmain{padding: 51px 0 80px 0;}
+			.mytextmain h3{color: #F04949;padding-bottom: 20px;font-size: 43px;}
+			.mytextmain p{line-height: 24px;font-size: 14px;}
+			.navbar-right >li{float: left;}
+			.title_left{float: left;}
+			.my_all{border: 1px solid #F04949;border-radius: 5px;}
+			.my_all > li{border-left:1px solid #F04949;}
+			.my_all > li >a{color: #283036;}
+			.my_all .my_active{background: #F04949;}
+			.my_all .my_active a{color: #fff;}
+			.thumbnail > img{width: 100%;}
+			.pt46{padding-bottom: 46px;}
+			.my_active{background: #F04949;color: #fff;text-align: center;}
+			.my_iopc{background: #ebebeb;color: #000;text-align: center;}
+			.pb107{padding-bottom: 107px;}
+			.mybgpic{min-height: 372px;background: url(images/tc110.png) no-repeat fixed;background-size: cover;}
+			.mymolde{min-height: 372px;background: rgba(0,0,0,.5);}
+			.myhello{background: transparent;color: #fff;text-align: center;}
+			.btn-primary{background-color: transparent;border-color: #fff;}
+			.btn-lg{padding: 21px 107px;}
+			.my_icoy{padding: 109px 0 60px 0;}
+			.red{color: #F04949;}
+			.my_full{font-size: 16px;padding-top: 5px;}
+			.media-body p{font-size: 12px ;line-height: 21px;}
+			.plr10{padding-left: 10px;}
+			.plr10 p{padding-top: 10px;}
+			.mt43{margin-top: 43px;}
+			.my_pic{position: relative;}
+			.times{position: absolute;left: 0;top:0;color: #fff;border-top: 7px solid #F04949;width: 94%;}
+			.times span{width: 50px;height: 50px;background-color: #F04949;display: block;text-align: center;margin-left: 6px;}
+			.times span p{font-size: 24px;}
+			.mt53{margin-top: 53px;}
+			.panel-default .my_bgcolor{background-color: #F04949;color: #fff;}
+			.panel-default .my_bgc{background-color: #d3d3d3;}
+			.my_name{background: #F04949;padding: 28px 0 40px 0;margin-top: 70px;color: #fff;text-align: center;}
+			.my_name p{font-size: 12px;}
+			.my_pichw{background-color: transparent;border: none;max-width: 212px;text-align: center;display: inline-block;}
+			footer{text-align: center;background-color: #283036;padding: 76px 0 80px 0;color: #fff;}
+			footer span{display: inline-block;padding-bottom: 50px;}
+			footer{line-height:30px;}
+		</style>
+	</head>
+
+	<body>
+		<div class="my_log  collapse navbar-collapse">
+			<div class="container ">
+				<a class="my_loginner text-left" href="#">
+		        	<img  src="images/awesome_modify_03.jpg/">
+		        	<span>Sunday, February 16 ,2014</span>
+		     	</a>
+		     	<a class="my_loginner text-left" href="#">
+		        	<img  src="images/awesome_modify_05.jpg">
+		        	<span>+86 13888888888</span>
+		     	</a>
+		     	<a class="my_loginner text-left" href="#">
+		        	<img  src="images/awesome_modify_07.jpg">
+		        	<span>yourmail@gmail.com</span>
+		     	</a>
+		     	<ul class="my_ul">
+		     		<li><a href="#"><img src="images/awesome_modify_09.jpg"/></a></li>
+		     		<li><a href="#"><img src="images/awesome_modify_11.jpg"/></a></li>
+		     		<li><a href="#"><img src="images/awesome_modify_13.jpg"/></a></li>
+		     		<li><a href="#"><img src="images/awesome_modify_15.jpg"/></a></li>
+		     		<li><a href="#"><img src="images/awesome_modify_17.jpg"/></a></li>
+		     	</ul>
+			</div>
+		</div>
+		
+		<nav class="navbar navbar-inverse">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand " href="#">
+		      	<img src="images/logo.png" class="img-responsive"/>
+		      </a>
+		    </div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right ">
+		        <li><a href="#">Home</a></li>
+		        <li><a href="#">About</a></li>
+		        <li><a href="#">Portfolios</a></li>
+		        <li><a href="#">Features</a></li>
+		        <li><a href="#">Our Products</a></li>
+		        <li><a href="#">Contact Us</a></li>
+		        <li><a href="#" class="mysou"><span>丨</span><span class="glyphicon glyphicon-search"></span></a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<div class="mywindow">
+			<div class="container ">
+				<div class="row">
+					<div class="col-md-6">
+						<span class="mycpt collapse  navbar-collapse">
+							<img src="images/img.png" class="img-responsive"/>
+						</span>
+					</div>
+					<div class="col-md-6">
+						<div class="mytext">
+							<h3 class="text-uppercase collapse navbar-collapse">An Amazing Responsive wordpress theme</h3>
+							<p>Lorem ipsum ex vix illud nonummy novum tation et his. At vix scriptaset patrioque scribentur, at pro fugit erts verterem molestiae, sed et vivendo ali Lorem ipsum ex vix illud nonummy, novum tation et his. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row mytextmain">
+				<div class="col-md-12 ">
+					<h3 class="text-center">Some Amazing Features</h3>
+					<p class="text-center">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at.Cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet erorem ipsum dolor sit amet consectetuer adipiscing elit. Mauris fermentum dictum magna.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 pt46">
+					<div class="row">
+						<div class="col-xs-7">
+							<h4 class="title_left">Recent Portfolio</h4>
+						</div>
+						<div class="col-xs-5 collapse navbar-collapse">
+							<ul class="nav navbar-right my_all">
+						        <li role="presentation" class="my_active"><a href="#">ALL</a></li>
+						        <li role="presentation"><a href="#">CATEGORY1</a></li>
+						        <li role="presentation"><a href="#">CATEGORY2</a></li>
+						        <li role="presentation"><a href="#">CATEGORY3</a></li>
+						    </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row pb107">
+				<div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail my_active">
+				      <img src="images/tc116.png" />
+				      <h4>Responsive Design</h4>
+				      <p>Quisque euismod orci ut et ..</p>
+				    </a>
+				</div>
+				<div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail my_iopc">
+				      <img src="images/tc115.png" />
+				      <h4>Responsive Design</h4>
+				      <p>Quisque euismod orci ut et ..</p>
+				    </a>
+				</div>
+				<div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail my_iopc">
+				      <img src="images/tc114.png" />
+				      <h4>Responsive Design</h4>
+				      <p>Quisque euismod orci ut et ..</p>
+				    </a>
+				</div>
+				<div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail my_iopc">
+				      <img src="images/tc113.png" />
+				      <h4>Responsive Design</h4>
+				      <p>Quisque euismod orci ut et ..</p>
+				    </a>
+				</div>
+			</div>
+		</div>
+		<div class="mybgpic responsive">
+			<div class="mymolde">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="jumbotron myhello">
+							  <h1>Welcome to our website!</h1>
+							  <p>We're experts in this field and we strive to provide high-quality web design, custom development and maintenance. Our goal is to provide unique design, powerful and practical functions, easy operation and user-friendly interface.</p>
+							  <p><a class="btn btn-primary btn-lg" href="#" role="button">Purchase Now</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row my_icoy">
+				<div class="col-md-4">
+					<div class="media">
+					  <div class="media-left">
+					    <a href="#">
+					      <img class="media-object" src="images/icoy_03.jpg">
+					    </a>
+					  </div>
+					  <div class="media-body">
+					    <h4 class="media-heading red my_full">Full responsive</h4>
+					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.</p></div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="media">
+					  <div class="media-left">
+					    <a href="#">
+					      <img class="media-object" src="images/icoy_08.jpg"/>
+					    </a>
+					  </div>
+					  <div class="media-body">
+					    <h4 class="media-heading red my_full">Code With Love</h4>
+					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.</p></div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="media">
+					  <div class="media-left">
+					    <a href="#">
+					      <img class="media-object" src="images/icoy_05.jpg"/>
+					    </a>
+					  </div>
+					  <div class="media-body">
+					    <h4 class="media-heading red my_full">Professional Customer Service</h4>
+					    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<h4>Latest News</h4>
+					<div class="row">
+						<div class="col-sm-6 mt43">
+							<div class="media">
+							  <div class="media-left my_pic">
+							    <a href="#">
+							      <img class="media-object" src="images/tc121.png"/>
+							    </a>
+							    <div class="times">
+							    	<span>
+							    		Nov
+							    		<p>20</p>
+							    	</span>
+							    </div>
+							  </div>
+							  <div class="media-body plr10">
+							    <h4 class="media-heading my_full">Hello World! This is my first post.</h4>
+							    <p>Cum soccis natoquo pennatibus et magins dis pennatikus montese,nasatur ridiculus mus</p>
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-6 mt43">
+							<div class="media">
+							  <div class="media-left my_pic">
+							    <a href="#">
+							      <img class="media-object" src="images/tc122.png"/>
+							    </a>
+							    <div class="times">
+							    	<span>
+							    		Nov
+							    		<p>11</p>
+							    	</span>
+							    </div>
+							  </div>
+							  <div class="media-body plr10">
+							    <h4 class="media-heading my_full">Hello World! This is my first post.</h4>
+							    <p>Cum soccis natoquo pennatibus et magins dis pennatikus montese,nasatur ridiculus mus</p>
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-6 mt43">
+							<div class="media">
+							  <div class="media-left my_pic">
+							    <a href="#">
+							      <img class="media-object" src="images/tc123.png"/>
+							    </a>
+							    <div class="times">
+							    	<span>
+							    		Nov
+							    		<p>8</p>
+							    	</span>
+							    </div>
+							  </div>
+							  <div class="media-body plr10">
+							    <h4 class="media-heading my_full">Hello World! This is my first post.</h4>
+							    <p>Cum soccis natoquo pennatibus et magins dis pennatikus montese,nasatur ridiculus mus</p>
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-6 mt43">
+							<div class="media">
+							  <div class="media-left my_pic">
+							    <a href="#">
+							      <img class="media-object" src="images/tc124.png"/>
+							    </a>
+							    <div class="times">
+							    	<span>
+							    		Nov
+							    		<p>24</p>
+							    	</span>
+							    </div>
+							  </div>
+							  <div class="media-body plr10">
+							    <h4 class="media-heading my_full">Hello World! This is my first post.</h4>
+							    <p>Cum soccis natoquo pennatibus et magins dis pennatikus montese,nasatur ridiculus mus</p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h4>Our Services</h4>
+					<div class="panel-group mt53" id="accordion" role="tablist" aria-multiselectable="true">
+					  <div class="panel panel-default">
+					    <div class="panel-heading my_bgcolor" role="tab" id="headingOne">
+					      <h4 class="panel-title">
+					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+					          <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;MANAGEMENT CONSULTING
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseOne" class="panel-collapse collapse in " role="tabpanel" aria-labelledby="headingOne">
+					      <div class="panel-body">
+					        Lorem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur avolutpat ru.Lorem ipsum dolor sit amet, consectetur.
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading my_bgc" role="tab" id="headingTwo">
+					      <h4 class="panel-title">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					         <span class="glyphicon glyphicon-minus"></span>&nbsp;&nbsp;MANAGEMENT CONSULTING
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					      <div class="panel-body">
+					        Lorem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur avolutpat ru.Lorem ipsum dolor sit amet, consectetur.
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-default">
+					    <div class="panel-heading my_bgc" role="tab" id="headingThree">
+					      <h4 class="panel-title">
+					        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					          <span class="glyphicon glyphicon-minus"></span>&nbsp;&nbsp;MANAGEMENT CONSULTING
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					      <div class="panel-body">
+					        Lorem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet ollicitudin.Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur avolutpat ru.Lorem ipsum dolor sit amet, consectetur.
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="my_name">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h4>Our Team</h4>
+						<p>orem ipsum dolor sit amet, consectetur scing elit. Ut volutpat rutrsit amet, consectetuum eros sectetur.Lorem ipsum dolorpsu sit amet ollicitudin.Lorem ipsum dolor sit etur.Lorem ipsum dolorpsu.Lorem ipsum dolorpsum dolor sitamet, consectetur scing elit. Ut volutpat rutrum e</p>
+					</div>
+				</div>
+				<div class="row mt43">
+					<div class="col-xs-6 col-md-3">
+					    <a href="#" class="thumbnail my_pichw">
+					     <img src="images/tc.png" class="img-circle img-responsive">
+					    </a>
+					    <h4>Frankie</h4>
+					</div>
+					<div class="col-xs-6 col-md-3">
+					    <a href="#" class="thumbnail my_pichw">
+					     <img src="images/tc18.png" class="img-circle img-responsive">
+					    </a>
+					    <h4>Elia Erica</h4>
+					</div>
+					<div class="col-xs-6 col-md-3">
+					    <a href="#" class="thumbnail my_pichw">
+					     <img src="images/tc119.png" class="img-circle img-responsive">
+					    </a>
+					    <h4>Brown Jone</h4>
+					</div>
+					<div class="col-xs-6 col-md-3">
+					    <a href="#" class="thumbnail my_pichw">
+					     <img src="images/tc120.png" class="img-circle img-responsive">
+					    </a>
+					    <h4>Marh die</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			
+			<span>
+				<img src="images/logo.png" class="img-responsive"/>
+			</span>
+			
+			<p>COPYRIGHT BY 2012 AWESOME<br/>COPYRIGHT BY 2012 AWESOME | PRIVACY STATEMENT | TERMS OF USE</p>
+		</footer>
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+
+</html>
