@@ -6,7 +6,7 @@
 .t_inner li a{color: #ffffe9;display: block;}
 .t_inner .LocationFloorList .ac{color:#fff;border-top-color: #ffa32b;background-color: rgba(255,213,35,.4);}
 .header{height:600px;width:100%;background: url(../images/shouye.jpg) no-repeat center  fixed;background-size:cover;position: relative;}
-.header .resume{transform-style: preserve-3d;width: 400px;height: 400px;position: absolute;top:100px;left: 750px;text-align: center;margin: 10px 0;}
+.header .resume{transform-style: preserve-3d;position: absolute;top:100px;left: 0;right: 0;text-align: center;margin: 0 auto;}
 .header .resume .toubiao{width: 100px;height: 100px;border-radius: 50%;margin: 0 auto;transform-style: preserve-3d;transform: rotateY(0deg) translateY(0px);animation:namet 5s;border: 2px solid transparent;animation-iteration-count: 2;}
 .header .resume .toubiao img{width: 100%;height: 100%;border-radius: 50%;position: absolute;top:0;left: 0;transform-style: preserve-3d;}
 .header .resume .toubiao .tou_2{transform: rotateY(180deg)}
@@ -67,7 +67,7 @@
 .h_beijin a:hover{background-color: #fcac45;}
 .banner{height:500px;width:1020px;margin:0 auto;position: relative;}
 .banner .b_inner{height:425px;padding-top:73px;float:right}
-.b_inner .b_right{width:550px;float:left;}
+.b_inner .b_right{width:590px;}
 .b_inner img{width:517px;height:323px;float:left;margin-right:7px;}
 .box{width: 300px;height:300px;position: absolute;top: 100px;left: 0;right: 0;bottom: 0;transform-style: preserve-3d ;transform: rotateY(45deg) rotateX(45deg);animation:mofang 10s;animation-iteration-count: infinite;animation-fill-mode: both;animation-direction:both;animation-direction:alternate;}
 .box div{width:100%;height:100%;position: absolute;opacity: 1;font-size: 40px;line-height: 300px;text-align: center;border-radius: 20px;}
@@ -87,14 +87,14 @@
 .b_inner h3{margin:20px 0;line-height: 31px;height:31px;color:#5a5a5a;text-transform:uppercase;font-weight: normal;padding-bottom:14px;background: url(../images/h_hentiao_03.jpg) no-repeat left bottom;}
 .b_inner h3 span{font-weight:bold;}
 .b_inner ul{margin: 20px 0;}
-.b_inner ul li{line-height: 35px;font-size:14px;color:#6a676c;font-style:italic;background: url(../images/dian_03.jpg) no-repeat left;padding-left: 25px;font-family: "Microsoft YaHei";}
+.b_inner ul li{line-height: 35px;font-size:15px;color:#6a676c;padding-left: 25px;font-family: "Microsoft YaHei";}
 .b_inner ul li span{font-weight: bold;font-style: normal;}
-.main{height:570px;background: url(../images/beijing2.jpg) no-repeat fixed;background-size: cover;text-align: center;}
-.m_inner{height:570px;width:100%;background-color: rgba(0,0,0,.5);}
+.main{height:650px;background: url(../images/beijing2.jpg) no-repeat fixed;background-size: cover;text-align: center;}
+.m_inner{height:650px;width:100%;background-color: rgba(0,0,0,.5);}
 .m_i_inner{width:1020px;margin:0 auto;}
 .m_i_inner h3{line-height: 58px;height:58px;color:#e8ffe8;text-transform:uppercase;font-weight: normal;background: url(../images/h_hentiao_03.jpg) no-repeat bottom center;padding-top:80px;font-size: 24px;}
-.m_i_inner .m_mess{padding-top:52px;width:340px;float:left;}
-.m_mess .m_box{width:340px;height:106px;text-align: center;margin-bottom: 60px;}
+.m_i_inner .m_mess{padding-top:52px;width:50%;float:left;}
+.m_mess .m_box{height:106px;text-align: center;margin-bottom: 60px;}
 .m_mess img{width:150px;height:150px;border-radius:10%;margin-bottom:3px;border:4px solid transparent;transition:all .5s;transform-style: preserve-3d;animation: gongsi 2s;transform: scale(1) translateY(0px);}
 .m_mess img:hover{border-color:#fcac45;animation: gongsi2 .9s;}
 @keyframes gongsi2{
@@ -115,7 +115,7 @@
 }
 .m_mess h5{line-height: 36px;height:36px;color:#f2f2f2;padding-top:26px;font-size: 16px;}
 .m_mess h6{line-height: 26px;color:#dfecdd;font-size: 15px;}
-.m_mess p{line-height: 18px;height:18px;color:#fff;font-size: 14px;padding:6px 32px;}
+.m_mess p{line-height: 18px;height:18px;color:#fff;font-size: 14px;padding:6px 32px;text-align: left;}
 .main_cener{height:540px;width:1020px;margin:0 auto;text-align: center;}
 .main_cener h3{line-height: 60px;height:60px;color:#9c9c9c;text-transform:uppercase;font-weight: normal;background: url(../images/h_hentiao_03.jpg) no-repeat bottom center;text-align: center;padding-top:83px;font-size: 24px;}
 .main_cener p{line-height: 18px;font-size: 18px;color:#686884;margin:30px 4px 61px;}
@@ -130,8 +130,8 @@
 .m_bot:hover .tu3{background: #fcac45 url(../images/tubiao11_03.png) no-repeat center;}
 .m_bot .tu4{background: url(../images/tubiao2_03.png) no-repeat center;}
 .m_bot:hover .tu4{background: #fcac45 url(../images/xiaotubiao_09.png) no-repeat center;}
-.main_top{height:382px;background: url(../images/beijing3.jpg) no-repeat fixed;background-size:cover;}
-.main_top .main_t_t{height:382px;background-color: rgba(255,255,255,.5);}
+.main_top{height:430px;background: url(../images/beijing3.jpg) no-repeat fixed;background-size:cover;}
+.main_top .main_t_t{height:430px;background-color: rgba(255,255,255,.5);padding-top: 80px;}
 #main{width: 600px;height: 400px;margin: 0 auto;color:#fff;}
 .main_t_t .m_nei{width:1020px;margin: 0 auto;}
 .main_t_t h3{line-height: 58px;height:58px;color:#ffffe8;text-transform:uppercase;font-weight: normal;background: url(../images/h_hentiao_03.jpg) no-repeat bottom center;padding-top:80px;}
@@ -139,7 +139,7 @@
 .main_t_t .m_ico{height:153px;width:204px;float: left;line-height: 153px;}
 .main_t_t .m_ico img{padding-top:63px;}
 .gai{height:263px;}
-.main_top2{width:1020px;margin: 0 auto;}
+.main_top2{width:1020px;margin: 0 auto;padding-top: 80px;}
 .main_top2 .m_top2{height:54px;}
 .main_top2 h4{line-height: 54px;height:54px;color:#5a5a5f;float:left;text-transform:uppercase;}
 .main_top2 ul{padding-left: 425px;}
@@ -194,7 +194,7 @@
 .f_inner .ftu2:hover{background: #f9c077 url(../images/footer2_bian.png) no-repeat center;height:25px;}
 .f_inner .ftu3:hover{background: #f9c077 url(../images/footer3_bian.png) no-repeat center;height:25px;}
 .f_inner .ftu4:hover{background: #f9c077 url(../images/footer4_bian.png) no-repeat center;height:25px;}
-.home{width: 50px;height: 50px;line-height: 50px;background: rgba(0,0,0,.5);border-radius: 50%;position: fixed;bottom: 0;right: 0;margin: 20px;text-align: center;}
+.home{display: none; width: 50px;height: 50px;line-height: 50px;background: rgba(0,0,0,.5);border-radius: 50%;position: fixed;bottom: 70px;right: 0;margin: 20px;text-align: center;}
 .home a{font-size: 12px;color: #edcc3e;width: 50px;height: 50px;display: block;border-radius: 50%;}
 .home:hover a{background: #edcc3e;color:#fff;}
 .home::after{content: "";height: 0;width: 0;border: 10px solid transparent;border-bottom-color: rgba(0,0,0,.5);position: absolute;right: 15px;bottom: 51px;}
