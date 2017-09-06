@@ -9,89 +9,7 @@
 	<body>
 		<script src="js/jquery-3.1.0.min.js"></script>
 		<script src="js/echarts.common.min.js"></script>
-		<script type="text/javascript">
-			$(function(){
-				$(window).scroll(function(){
-					$('.floor').each(function () {
-						var disH = $(this).offset().top - $(window).scrollTop();//this盒子总高减去文档超出的距离，获得盒子顶部的位置
-						if (disH<300&&disH>=0) {  //如果盒子顶部在自已定义范围内，就执行下面的程序
-						    var ix = $(this).index()-3;//记录目标元素的下标值  
-						    if(!$('html,body').is(':animated')){//动画效果取反   只有在false才执行下面代码
-						    	$('.LocationFloorList li:eq('+ix+')').addClass('ac').siblings().removeClass('ac');
-						    }
-						}
-					})
-				})
-				$(".LocationFloorList li").click(function(){//给每个li绑定点击事件
-					$(this).addClass('ac').siblings().removeClass('ac');//点击的目标盒子添加ac
-					var ix = $(this).index();//获取点击对象的下标值
-					var body_h=$('.floor:eq('+ix+')').offset().top;//获取目标盒子距离文档的总高值
-					$('html,body').stop().animate({'scrollTop':body_h},1000);//点击时候，把获取的值赋给body让它动；
-				});
-				$('.toubiao').hover(
-					function(){
-						$(this).css('border','2px solid rgba(255,213,35,.4)')
-					},
-					function(){
-						$(this).css('border','2px solid rgba(255,213,35,0)');
-					}
-				);
-				option = {
-				    tooltip: {
-				        trigger: 'item',
-				        formatter: "{a} <br/>{b}: {c} ({d}%)"
-				    },
-				    legend: {
-				        orient: 'vertical',
-				        x: 'left',
-				        data:['Html','CSS','Web','jQuery','动画','动态','静态','其他']
-				    },
-				    series: [
-				        {
-				            name:'熟练度',
-				            type:'pie',
-				            selectedMode: 'single',
-				            radius: [0, '30%'],
-				
-				            label: {
-				                normal: {
-				                    position: 'inner'
-				                }
-				            },
-				            labelLine: {
-				                normal: {
-				                    show: false
-				                }
-				            },
-				            data:[
-				                {value:335, name:'Html', selected:true},
-				                {value:679, name:'css'},
-				                {value:1548, name:'jQuery'}
-				            ]
-				        },
-				        {
-				            name:'熟练度',
-				            type:'pie',
-				            radius: ['40%', '55%'],
-				
-				            data:[
-				                {value:335, name:'Html'},
-				                {value:135, name:'CSS'},
-				                {value:1048, name:'Web'},
-				                {value:251, name:'动画'},
-				                {value:251, name:'动态'},
-				                {value:147, name:'静态'},
-				                {value:102, name:'其他'}
-				            ]
-				        }
-				    ]
-				};
-				
-					var oBox=document.getElementById("main");
-					var myChart=echarts.init(oBox)
-					myChart.setOption(option);
-			});
-		</script>
+		<script src="js/index.js"></script>
     	<!--头部开始-->
 		<div class="top">
 			<div class="t_inner">
@@ -101,7 +19,7 @@
 					<li><a href="#testimonials">求职意愿</a></li>
 					<li><a href="#">工作经历</a></li>
 					<li><a href="#services">教育背景</a></li>
-					<li><a href="#team">个人特长</a></li>
+					<li><a href="#team">技能熟练</a></li>
 					<li><a href="#about">个人作品</a></li>
 					<li><a href="#">联系方式</a></li>
 				</ul>
@@ -112,8 +30,8 @@
 		<div class="header floor">
 			<ul class="resume">
 				<li class="toubiao">
-					<img src="images/03.jpg" class="tou_1"/>
-					<img src="images/01.jpg" class="tou_2"/>
+					<img src="images/geren.jpg" class="tou_1"/>
+					<img src="images/geren.jpg" class="tou_2"/>
 				</li>
 				<li><span>姓名:　</span>周玉成</li>
 				<li><span>性别:　</span>男</li>
@@ -159,14 +77,13 @@
 					<div class="box6"><img src="images/qianduan5.jpg"/></div>
 				</div>
 				<div class="b_right">
-					<h5>求职意愿</h5>
-					<li></li>
-					<h3>领导：<span>您好。</span></h3>
-					<p></p>
+					<h3>求职意愿：<span>&nbsp;&nbsp;web前端开发</span></h3>
+					<p>技术技能</p>
 					<ul>
-						<li><span>网页制作</span> - 响应式页面,简单不冗余代码。css3流畅动画效果，兼容不同浏览器。期望薪资：7000-8000</li>
-						<li><span>前端功能</span> - 用JS完成常见的前端功能特效。用AJAX读取后台数据。期望薪资：7000-8000</li>
-						<li><span>h5页面</span> - 移动端页面的书写。兼容平板、安卓、IOS不同终端。期望薪资：7000-8000</li>
+						<li><span>1. </span>熟练运用html+css布局，HTML5，css3，sass，json，js脚本前端技术；</li>
+						<li><span>2. </span>熟练bootstrap、jquery、requirejs，angulajs,vuejs，miniui，weui，swiper，JQuery UI，Ueditor开发和插件以及了解reactjs等开源框架 </li>
+						<li><span>3. </span>熟练解决各种浏览器的兼容性问题。熟练运用Photoshop图像处理软件的使用, git版本管理工具</li>
+						<li><span>4. </span>熟悉网站的响应式布局。对网站的性能优化,Web标准和标签语义有一定认识!</li>
 					</ul>
 				</div>
 			</div>
@@ -181,17 +98,21 @@
 						<div class="m_box">
 							<img src="images/0111.jpg" / class="touxiang">
 						</div>
-						<h5>深圳淘腾网络科技有限公司</h5>
-						<h6>该公司是一间专注于跨境贸易的互联网电商公司</h6>
-						<p>响应式页面,简单不冗余代码。css3流畅动画效果，兼容不同浏览器。</p>
+						<h5>武汉灵瑞投资管理有限公司</h5>
+						<h6>2013.03--2015.05</h6>
+						<p>销售经理  联系客户客户，约时间拜访，谈广告合作。告知客户现在市场需求，竞争环境。并且为客户量身定制一个合理的方案。出于对互联网的热爱，所以利用每天下班时间，自学WEB前段开发，视频，大量书籍等。</p>
 					</div>
 					<div class="m_mess">
 						<div class="m_box">
 							<img src="images/0222.jpg" / class="touxiang">
 						</div>
-						<h5>深圳耀星互娱网络科技有限公司</h5>
-						<h6>简称耀星互娱以“快乐传递，文化传承”为宗旨</h6>
-						<p>用JS完成常见的前端功能特效。用AJAX读取后台数据。</p>
+						<h5>武汉市威网软件有限公司</h5>
+						<h6>2015.06--2017.08</h6>
+						<p>
+							1. 根据设计师psd和网站产品经理的功能需求，用html5+css，javascript，jquery，bootstrap完成网站界面开发以及运用ajax完成后台数据交互，功能特效等开发，对网站某些不合理的地方，讨论修改。在这期间，完成两个后台管理系统项目，对javascript，jquery画数据表逻辑结构运用比较多。 <br />
+    						2. 除了以上之外，做了一个桌面、手机版本的游戏模板网站，很多游戏开发商开发的小游戏到腾讯平台发布，推广，由于此而开发的此模板。<br />
+   							3. 在这其间，除了制作传统的网站，从事webapp的前端开发工作。主要运用的新技术：html5的新标签，canvas画布，css3等新属性。
+						</p>
 					</div>
 				</div>
 			</div>
@@ -207,7 +128,7 @@
 			<div class="m_bot">
 				<div class="m_b_tou  tu2"></div>
 				<h4>时间</h4>
-				<p>2009年-2013毕业</p>
+				<p>2009年-2012毕业</p>
 			</div>
 			<div class="m_bot">
 				<div class="m_b_tou  tu3"></div>
@@ -217,7 +138,7 @@
 			<div class="m_bot">
 				<div class="m_b_tou  tu4"></div>
 				<h4>职业证</h4>
-				<p>普通话证，计算机二级证</p>
+				<p>计算机二级证</p>
 			</div>
 		</div>
 		<div class="main_top floor">
@@ -233,7 +154,7 @@
 					<li><a href="#">Web</a><span>|</span></li>
 					<li><a href="#">CSS</a><span>|</span></li>
 					<li><a href="#">Html5</a><span>|</span></li>
-					<li><a href="#">Java</a><span>|</span></li>
+					<li><a href="#">canvas</a><span>|</span></li>
 					<li><a href="#">欢迎鉴赏</a></li>
 				</ul>
 			</div>
@@ -242,14 +163,14 @@
 					<img src="images/01_002.jpg" />
 					<a href="ucindex.html">
 						<h3>作品集一</h3>
-						<span>写jq前端功能的时候，我的宗旨是能手写就手写，不依赖插件。手写代码更简洁高效，也更能提升自己技术。</span>
+						<span>纯静态页面，我的宗旨是能手写就手写，不依赖插件。没有使用任何插件，自学时候作品</span>
 					</a>
 				</div>
 				<div class="m_topnei">
 					<img src="images/02_002.jpg" />
 					<a href="gerenindex.html">
 						<h3>作品集二</h3>
-						<span>AJAX获取后台数据，用数组读取选项与题目。记录测试者的选项返给后台。</span>
+						<span>静态页面，有网页交互各个点击跳转效果，纯手写，没用插件。</span>
 					</a>
 				</div>
 				<div class="m_topnei">
@@ -263,21 +184,21 @@
 					<img src="images/04.jpg" />
 					<a href="douban/index.html">
 						<h3>作品集四</h3>
-						<span>无缝轮播手写，花瓣动画。</span>
+						<span>手机端APP豆瓣，适配于各种手机端口，vue搭建环境。</span>
 					</a>
 				</div>
 				<div class="m_topnei">
 					<img src="images/05.jpg" />
 					<a href="xiangyingshi/index.html">
 						<h3>作品集五</h3>
-						<span>视频播放，富文本编辑器手写。</span>
+						<span>响应式页面，适配不同大小平台。使用bootstrap搭建。</span>
 					</a>
 				</div>
 				<div class="m_topnei">
 					<img src="images/06.jpg" />
 					<a href="greywolf/greywolf.html">
 						<h3>作品集六</h3>
-						<span>多数据响应式网页，能兼容不同大小电脑分辨率</span>
+						<span>APP小游戏，用原生JS实现的。</span>
 					</a>
 				</div>
 				<div class="m_topnei">
@@ -300,7 +221,7 @@
 			<div class="m_coffee">
 				<div class="m_coffee_n">	
 					<h3>个人评价</h3>
-					<p>　　我是一名前端工程师。前端是一门有容乃大的行业，我并不是计算机专业出生。 在自学前端之前，唯一接触过的就是大学里的C语言。庆幸的是JS与C很相像，给我很大的信心来学习。今后的职业规划也是朝着JS发展，目前在学习Angular JS。<br>工作近一年，大的来说，写过响应式页面，移动端页面，pc端页面。小的来说，直播，商城，投票，视频，相册，地图，无缝轮播等都有涉及。 很感谢 成都清风竞技文化传媒有限公司 对我的培养，让我学到了很多东西。</p>
+					<p>　本人待人诚实，容易与人相处，做事认真，适应能力比较强，熟练使用各种代码编辑器，善于在工作中提出问题，发现问题，解决问题，有较强的分析能力；勤奋好学，动手能力强，有很强的的社会责任感，思路清晰，积极主动，具备良好的沟通能力和团队协作精神。生活中，我是一个热心肠的人。</p>
 					<div class="m_coffee_text"><span>个人格言：</span>没有最好，只有更好！</div>
 				</div>
 			</div>
@@ -323,7 +244,7 @@
        	<!--底部开始-->
 		<div class="footer">
 			<div class="f_inner" id="Contact">
-				<p>ALL RIGHTS RESERVED.COPYRIGHT © 2017年7月14 <span>我的简历</span> - More Templates <span>个人创作</span></p>
+				<p> © 2017年8月5 <span>我的简历</span> - More Templates <span>个人创作</span></p>
 				<div class="f_right ftu3">
 					<a href="#"></a>
 				</div>
