@@ -44,14 +44,14 @@
 	to{transform: translate(-300px,600px);opacity: 0;}
 }
 .xingxing{width: 190;height: 61px;position: absolute;top: 0;left: 0;}
-.xingxing li{position: absolute;top: 0;left: 0;}
+.xingxing li{position: absolute;top: 0;right: 0;}
 .xingxing .pic_da1{top: 200px;left: 300px;}
-.xingxing .pic_da2{top: 300px;left: 1200px;}
+.xingxing .pic_da2{top: 300px;left: 800px;}
 .xingxing .pic_xiao1{top: 100px;left: 200px;animation: namepic .8s;animation-iteration-count: infinite;}
 .xingxing .pic_xiao2{top: 300px;left: 500px;animation: namepic .6s;animation-iteration-count: infinite;}
 .xingxing .pic_xiao3{top: 200px;left: 150px;animation: namepic 1.5s;animation-iteration-count: infinite;}
-.xingxing .pic_xiao4{top: 200px;left: 1200px;animation: namepic .4s;animation-iteration-count: infinite;}
-.xingxing .pic_xiao5{top: 100px;left: 1400px;animation: namepic 2s;animation-iteration-count: infinite;}
+.xingxing .pic_xiao4{top: 200px;left: 900px;animation: namepic .4s;animation-iteration-count: infinite;}
+.xingxing .pic_xiao5{top: 100px;left: 1000px;animation: namepic 2s;animation-iteration-count: infinite;}
 @keyframes namepic{
 	from{opacity: 1;}
 	to{opacity: 0;}
@@ -179,7 +179,7 @@
 .main_top4 .email{width:327px;height:50px;float:left;margin:0 25px 15px 0;}
 .main_top4 .emai2{margin-right: 0;}
 .main_top4 .submit{width:118px;height:36px;background-color: #fcac45;display: inline-block;float:right;margin:13px 2px 0 0;color:#fff;font-size: 14px;line-height: 36px;cursor: pointer;}
-.main_top4 img{width: 300px;height:300px;position: absolute;left: -618px;bottom: 0;}
+.main_top4 img{width: 300px;height:300px;position: absolute;left: -300px;bottom: 0;}
 .footer{height:75px;background-color: #222;}
 .footer .f_inner{width:1020px;margin:0 auto;}
 .f_inner p{color:#e9e9db;line-height: 75px;float:left;}
