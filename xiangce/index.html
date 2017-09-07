@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{width: 980px;height: 500px;border: 2px solid #00FFFF;border-radius: 20px;position: absolute;top: 70px;left: 300px;transform-style: preserve-3d;transform:rotateX(-30deg);perspective: 2000px;}
+			.gou_bot{position: absolute;left: 690px;top: 580px;}
+			.gou_top{position: absolute;left: 620px;top: 580px;}
+			.center{position: absolute;top:0;left: 0;transform-style: preserve-3d;transition: transform .8s;transform-origin: bottom;}
+			.center img{border-radius: 20px;transform-origin: bottom;}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<button type="button" class="gou_top">上一张</button>
+		<button type="button" class="gou_bot">下一张</button>
+	</body>
+</html>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script>
+	var num=6;//图片数量
+	for(var i=0;i<num;i++){
+		$('.box').append('<div class="center"><img src="img/'+i+'.jpg"/></div>')
+	};
+	$('.center').each(function(i){
+		$(this).css("transform","translateZ(-"+i*50+"px)");
+	});
+	var isClick=true;
+	$('.gou_bot').click(function(){
+		if(!isClick){
+			return;//如果是false就不执行以下代码
+		}
+		var pic1=$('.center').eq(0);
+		pic1.css('transform','rotateX(-178deg)')
+			.css('opacity','.1');
+		setTimeout(function(){
+			pic1.css("transform","translateZ(-"+num*50+"px)")
+				.css('opacity','1').appendTo('.box');
+				setTimeout(set,500)
+		},1000);
+		function set(){
+			$('.center').each(function(i){
+				$(this).css("transform","translateZ(-"+i*50+"px)");
+				isClick=true;//动画执行完之后才是赋值true
+			});
+		};
+		isClick=false;//以上动画没执行完前，都是false
+	})
+	$('.gou_top').click(function(){//上一张
+		if(!isClick){
+			return;
+		}
+		var j=num-1;
+		var pic1=$('.center').eq(j);
+		pic1.css('transform','rotateX(179deg)')
+			.css('opacity','.1');
+		setTimeout(function(){
+			pic1.css("transform","translateZ(0px)")
+				.css('transform','rotateX(-179deg)')
+				.prependTo('.box');
+				setTimeout(function(){
+				$('.center').each(function(i){
+					$(this).css("transform","translateZ(-"+i*50+"px)")
+				});
+				setTimeout(function(){
+					pic1.css('opacity','1');
+					isClick=true;
+				},666)
+			},400)
+				
+		},800)
+		isClick=false;
+	})
+</script>
